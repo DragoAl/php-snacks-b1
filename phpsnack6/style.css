@@ -1,0 +1,15 @@
+.box {
+    width: 150px;
+    height: 75px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.teachers {
+    background-color: lightgrey;
+}
+
+.pm {
+    background-color: green;
+}
