@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <h1>15 Random and different Numbers</h1>
+    <h1>15 Random and different Numbers 1-50</h1>
     <?php
  
 
