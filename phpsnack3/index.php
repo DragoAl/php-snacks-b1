@@ -53,17 +53,29 @@
                 ]
             ],
         ];
-        $keys= array_keys($posts);
+        // funzione per ottendere le chiavi dell'array, $dataKeys array sequenziale
+        $dateKeys= array_keys($posts);
         
-        for ($i=0; $i< count($keys); $i++) {
-            $key = $keys[$i];
-           
-            foreach(($posts[$key]) as ['title' => $title, 'author' => $author, 'text' => $text]){
-                echo "<p> $title <br> $author <br> $text</p>";
-            }
+        // ciclo sulla lunghezza dell'array ottenuto 
+        for ($i=0; $i< count($dateKeys); $i++) {
+            $dateKey = $dateKeys[$i];
 
-        
+            echo '<h2>'. $dateKey .'</h2>';
+            // prendo i post dentro l'array di ogni singola chiave(data)
+            $subPosts = $posts[$dateKey]; 
+            for ($y = 0; $y< count($subPosts); $y++) {
+                $post = $subPosts[$y];
+
+                echo '<p>'.$post['title']. '<br>'.$post['author'].'<br>'  .$post['text']. '</p>';
+
+            }
+           
+
         }
+
+            // foreach(($posts[$key]) as ['title' => $title, 'author' => $author, 'text' => $text]){
+            //     echo "<p> $title <br> $author <br> $text</p>";
+            // }
          
     ?>
     
