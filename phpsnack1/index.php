@@ -71,13 +71,14 @@
         ];
     
     
-    
-    
-            
-        foreach($round as ["homeTeam" => $homeTeam, "visitorTeam" => $visitorTeam, "homePoints" => $homePoints, "visitorPoints" => $visitorPoints  ]) {
-        echo "<p> <strong>$homeTeam</strong>- <strong>$visitorTeam</strong> / $homePoints - $visitorPoints \n<p>";
+        // foreach($round as ["homeTeam" => $homeTeam, "visitorTeam" => $visitorTeam, "homePoints" => $homePoints, "visitorPoints" => $visitorPoints  ]) {
+        //     echo "<p> <strong>$homeTeam</strong>- <strong>$visitorTeam</strong> / $homePoints - $visitorPoints \n<p>";    
+        // };   
+          
+        foreach($round as $partita) {
+            echo  $partita["homeTeam"] . "-". $partita["visitorTeam"]. "/". $partita["homePoints"] . "-". $partita["visitorPoints"] . '<br> ';
 
-        }
+        };
 
     ?>
 </body>

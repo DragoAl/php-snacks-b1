@@ -27,7 +27,7 @@
         $textArr= explode(".", $text);
         
         foreach ($textArr as $paragrphs) {
-            echo "<p>$paragrphs</p>";
+            echo "<p>$paragrphs.</p>";
         }
     ?>
     

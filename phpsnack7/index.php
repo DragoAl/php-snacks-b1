@@ -52,13 +52,21 @@
             ],
         ];
 
-        foreach($class as ["name" => $name, "surname" => $surname, "mathvote" => $mathvote, "itavote" => $itavote, "codevote" => $codevote, "sciencevote" => $sciencevote  ]) {
-            $sumVote = $mathvote += $itavote += $codevote += $sciencevote;
+        // foreach($class as ["name" => $name, "surname" => $surname, "mathvote" => $mathvote, "itavote" => $itavote, "codevote" => $codevote, "sciencevote" => $sciencevote  ]) {
+        //     $sumVote = $mathvote += $itavote += $codevote += $sciencevote;
+        //     $avgVote = $sumVote / 4;
+
+
+        //     echo "<p> <strong>$name</strong> <strong>$surname</strong> <br> 'La media dei voti è :' $avgVote  \n<p>";
+        // }       
+
+        foreach ($class as $student) {
+            $sumVote = $student['mathvote'] += $student['itavote'] += $student['codevote'] += $student['sciencevote'];
             $avgVote = $sumVote / 4;
 
-
-            echo "<p> <strong>$name</strong> <strong>$surname</strong> <br> 'La media dei voti è :' $avgVote  \n<p>";
-        }       
+            echo $student['name']  . $student['surname'] . "<br>" . "La media dei voti è :" . $avgVote . "<br>"."<br>"  ;
+            
+        }
 
     ?>
     
